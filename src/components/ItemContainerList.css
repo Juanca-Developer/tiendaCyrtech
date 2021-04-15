@@ -1,0 +1,15 @@
+.container-home{
+
+    background-color: crimson;
+    height: 80vmin;
+    
+}
+
+
+h1{
+    text-align: center;
+    margin-top: 10px;
+    color: white;
+    background-color: crimson;
+    padding: 15px;
+}
