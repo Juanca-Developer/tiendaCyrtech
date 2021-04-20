@@ -1,5 +1,7 @@
 import React from 'react';
 import './ItemContainerList.css'
+import ItemCount from './ItemCount';
+
 
 
 export default function Login(props){
@@ -9,7 +11,11 @@ export default function Login(props){
      <div className="container-home">
            
          <h1> {props.greeting}</h1>
-        
+         
+        <ItemCount/> 
+         
+         
+      
     </div>  
 
     )

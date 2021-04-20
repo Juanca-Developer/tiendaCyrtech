@@ -6,6 +6,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 
+
+
 function App() {
   return (
     <div className="App">
@@ -14,7 +16,8 @@ function App() {
          <NavBar/> 
       </header>
       <ItemListContainer greeting = "Soluciones reales a problemas digitales"/>
-    </div>
+            
+      </div>
   );
 }
 
