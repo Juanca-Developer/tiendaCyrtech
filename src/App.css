@@ -13,6 +13,13 @@
     
   }
 }
+h1 {
+  text-align: center;
+  font-size: large;
+  margin-top: 15px;
+  color: black;
+  padding: 25px;
+}
 .logo-carrito{
   height: 5vmin;
 }
@@ -36,6 +43,16 @@
   font-weight: 700;
 
 }
-
+.card{
+  
+  width: 25rem;
+}
+.card-body{
+  text-align: center;
+}
+.card-price {
+  font-weight: 700;
+  font-size: 20px;
+}
 
 

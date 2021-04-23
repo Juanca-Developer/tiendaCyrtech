@@ -1,12 +1,13 @@
 .container-home{
 
-    height: 80vmin;
+    height: 40vmin;
     
 }
 
 
-h1{
+h1 {
     text-align: center;
+    font-size: large;
     margin-top: 10px;
     color: black;
     padding: 15px;
