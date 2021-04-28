@@ -4,6 +4,9 @@ import './App.css';
 import NavBar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemDetailContainer from './components/ItemDetailContainer';
+
+
 
 
 
@@ -22,7 +25,8 @@ function App() {
          <NavBar/> 
       </header>
       <ItemListContainer greeting = "Soluciones reales a problemas digitales"/>
-            
+      <ItemDetailContainer itemId ={5}/>  
+        
       </div>
     </BrowserRouter> 
   );

@@ -1,0 +1,75 @@
+[
+    {
+        "id":"1",
+        "titulo":"IBM X3650",
+        "categoria":"Servidores",
+        "descripcion":"Servidor de almacenamiento de alta densidad.",
+        "precio":250000.00,
+        "img":"./imagenes/ibmx3650.webp"
+    },
+    {
+      "id":"2",
+      "titulo":" DELL - Poweredge R240",
+      "categoria":"Servidores",
+      "descripcion":"Servidor en rack con socket unico.",
+      "precio":185000.00,
+      "img":"./imagenes/dellr240.webp"
+    },
+    {
+      "id":"3",
+      "titulo":"HPE Proliant - DL 120",
+      "categoria":"Servidores",
+      "descripcion":"Servidor de entrada con rendimiento y capacidad de ampliacion.",
+      "precio":450000.00,
+      "img":"./imagenes/hpedl120.webp"
+    },
+    {
+     "id":"4",
+      "titulo":"HPE Proliant - DL 160g",
+      "categoria":"Servidores",
+      "descripcion":"El seguro servidor HPE ProLiant DL160 Gen10 2P 1U ofrece el equilibrio perfecto entre rendimiento, almacenamiento, fiabilidad, capacidad de gestión y eficiencia.",
+      "precio":235000.00,
+      "img":"./imagenes/hpedl160.webp" 
+    },
+    {
+      "id":"5",
+       "titulo":"HPE Proliant - DL 180",
+       "categoria":"Servidores",
+       "descripcion":"El seguro servidor HPE ProLiant DL180 Gen10 ofrece escalabilidad, rendimiento y fiabilidad, lo que lo convierte en la plataforma ideal para empresas preparadas para ejecutar aplicaciones en la nube híbrida y local. Estas empresas necesitan la combinación adecuada de computación y almacenamiento, que les permitan alcanzar los objetivos más importantes.",
+       "precio":320000.00,
+       "img":"./imagenes/hpedl180.webp" 
+     },
+     {
+      "id":"6",
+       "titulo":"HPE Proliant - DL 20",
+       "categoria":"Servidores",
+       "descripcion":"La plataforma compacta ideal para empresas en crecimiento y proveedores de servicios que ejecutan cargas de trabajo de infraestructura TI en entornos con limitaciones de espacio.",
+       "precio":215000.00,
+       "img":"./imagenes/hpedl20.webp" 
+     },
+     {
+      "id":"7",
+       "titulo":"HPE JL382A OfficeConnect",
+       "categoria":"Switch",
+       "descripcion":"Más allá de cual sea tu necesidad de conectar dispositivos, siempre vas a poder conseguir un switch HP que te facilite las cosas. Son simples y fáciles de manipular a la hora de conectar computadoras, impresoras, consolas, televisores inteligentes, y cualquier otro equipo que necesites.",
+       "precio":55000.00,
+       "img":"./imagenes/hpejl382a.webp" 
+     },
+     {
+      "id":"8",
+       "titulo":"HP 1920 OfficeConnect",
+       "categoria":"Switch",
+       "descripcion":"HPE 1920 es parte del portafolio HPE OfficeConnect, está diseñado para organizaciones más pequeñas que lidian con aplicaciones exigentes en términos de ancho de banda.",
+       "precio":33500.00,
+       "img":"./imagenes/hp1920.webp" 
+     },
+     {
+      "id":"9",
+       "titulo":"Cisco SG250",
+       "categoria":"Switch",
+       "descripcion":"Este switch, cuenta con una capacidad de conmutación de 52Gbps lo que te va a permitir transferir datos entre los diferentes dispositivos que formen tu LAN, o red local, de una manera más eficiente y así mejorará el ritmo de tu servidor de red y tus conexiones troncales.",
+       "precio":28000.00,
+       "img":"./imagenes/ciscosg250.webp" 
+     }
+     
+]

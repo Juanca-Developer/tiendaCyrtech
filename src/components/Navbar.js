@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav"
 import Logo from "../img/cyrtech-logo-vector.png"
 import CartWidget from './CartWidget'
 
+
 export default function NavBar() {
   return (
     <div>
@@ -23,6 +24,7 @@ export default function NavBar() {
              
           </Navbar.Collapse>
           <CartWidget/>
+        
       </Navbar>
       
     </div>

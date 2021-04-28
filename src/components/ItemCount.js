@@ -40,6 +40,7 @@ var stock = 5
                Cantidad = {cantidad}
                <Button variant ="info" onClick ={onIncrement}> + </Button>
                <Button variant="primary">Agregar al Carrito</Button>
+               
              </Card.Body>
           </Card>
        

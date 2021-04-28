@@ -6,9 +6,9 @@ export default function List({dataInput}) {
     return (
         <div className="d-flex flex-md-row justify-content-around flex-wrap">
         {
-            dataInput.map((data) => { 
+            dataInput.map((datos) => { 
             return (
-                <Item key={data.id} data={data} />
+                <Item key={datos.id} data={datos} />
             )
             })
         }

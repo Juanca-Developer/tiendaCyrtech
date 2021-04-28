@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import ItemList from '../components/ItemList';
-import datajson from '../items.json'
+import items from './items.json'
+
 
 
 export default function ItemListContainer({greeting}) {
@@ -8,7 +9,7 @@ export default function ItemListContainer({greeting}) {
 
     new Promise((resolve, reject) => { 
         setTimeout(() => {
-            resolve(datajson);
+            resolve(items);
              }, 2000);
     })
     .then(res=> setData(res))
@@ -21,6 +22,7 @@ export default function ItemListContainer({greeting}) {
             </div>
             <div>
                 <ItemList dataInput={data}/>
+                
             </div>
         </div>
     )
