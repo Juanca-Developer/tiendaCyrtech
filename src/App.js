@@ -8,11 +8,12 @@ import ItemDetailContainer from './components/ItemDetailContainer';
 import HomePage from './container/Pages/homepage/Homepage'
 import PageEmpresa from './container/Pages/empresapage/PageEmpresa'
 import PageServicios from './container/Pages/serviciospage/PageServicios'
-
+import {CardContext} from './context/CardContext'
 
 function App() {
   return (
     <div className="App">
+    <CardContext.Provider value ={[]}>  
     <Router> 
     
     <NavBar/>
@@ -41,6 +42,7 @@ function App() {
       </Switch>
       
     </Router> 
+    </CardContext.Provider> 
     </div>
   );
 }

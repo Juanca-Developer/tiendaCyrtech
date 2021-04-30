@@ -1,5 +1,6 @@
 import React from "react";
 import { Modal, Button } from "react-bootstrap";
+import {useParams} from 'react-router-dom';
 import ItemCount from "../components/ItemCount";
 import './itemDetail.css'
 
