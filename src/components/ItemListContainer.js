@@ -1,12 +1,16 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import ItemList from '../components/ItemList';
 import items from './items.json'
+import {useParams} from 'react-router-dom'
 
 
 
 
-export default function ItemListContainer({greeting}) {
+export default function ItemListContainer({greeting,category}) {
     const [data, setData] = useState([]);
+    
+
+    
 
     new Promise((resolve, reject) => { 
         setTimeout(() => {
@@ -14,6 +18,8 @@ export default function ItemListContainer({greeting}) {
              }, 2000);
     })
     .then(res=> setData(res))
+
+    
 
     return(
         <div>

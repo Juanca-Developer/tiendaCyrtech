@@ -4,7 +4,7 @@
         "titulo":"IBM X3650",
         "categoria":"Servidores",
         "descripcion":"Servidor de almacenamiento de alta densidad.",
-        "precio":250000.00,
+        "precio":250.000,
         "img":"./imagenes/ibmx3650.webp"
     },
     {
@@ -12,7 +12,7 @@
       "titulo":" DELL - Poweredge R240",
       "categoria":"Servidores",
       "descripcion":"Servidor en rack con socket unico.",
-      "precio":185000.00,
+      "precio":185.000,
       "img":"./imagenes/dellr240.webp"
     },
     {
@@ -20,7 +20,7 @@
       "titulo":"HPE Proliant - DL 120",
       "categoria":"Servidores",
       "descripcion":"Servidor de entrada con rendimiento y capacidad de ampliacion.",
-      "precio":450000.00,
+      "precio":450.000,
       "img":"./imagenes/hpedl120.webp"
     },
     {

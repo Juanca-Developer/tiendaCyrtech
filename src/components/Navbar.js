@@ -1,8 +1,10 @@
 import React from 'react';
 import Navbar from "react-bootstrap/Navbar"
+import './Navbar.css'
 import Nav from "react-bootstrap/Nav"
 import Logo from "../img/cyrtech-logo-vector.png"
 import CartWidget from './CartWidget'
+import {Link} from 'react-router-dom'
 
 
 export default function NavBar() {
@@ -16,10 +18,11 @@ export default function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
              <Nav className="mr-auto">
-               <Nav.Link href="empresa">Empresa</Nav.Link>
-               <Nav.Link href="servicios">Servicios</Nav.Link>
-               <Nav.Link href="productos">Productos</Nav.Link>
-               <Nav.Link href="contacto">Contacto</Nav.Link>
+               <Link to ="/empresa">Empresa</Link>
+               <Link to="/servicios">Servicios</Link>
+               <Link to="/productos">Productos</Link>
+               <Link to="/categorias">Categorias</Link>
+               <Link to="/contacto">Contacto</Link>
              </Nav>
              
           </Navbar.Collapse>

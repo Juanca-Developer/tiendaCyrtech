@@ -1,14 +1,14 @@
 import React from 'react'
-import Item from './Item'
+import Categories from './Categories'
 
-export default function List({dataInput}) {
+export default function List({postdata}) {
 
     return (
         <div className="d-flex flex-md-row justify-content-around flex-wrap">
         {
-            dataInput.map((datos) => { 
+            postdata.map((datos) => { 
             return (
-                <Item key={datos.id} data={datos} />
+                <Categories key={datos.categoria} data={datos} />
             )
             })
         }

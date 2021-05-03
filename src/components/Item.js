@@ -1,6 +1,7 @@
 import React from 'react'
 import ItemCount from '../components/ItemCount';
-import { getItemsById } from '../services/itemsService';
+import {Link} from 'react-router-dom'
+
 
 
 export default function Item({data}) {
@@ -12,11 +13,12 @@ export default function Item({data}) {
             <div className="card-body">
                 <h5 className="card-title">{data.titulo}</h5>
                 <p className="card-price">Precio: $ {data.precio}</p>
-                 
+                
               
             </div>
             <div>
                 <ItemCount producto={data.categoria} />
+                <Link to = {`/productos/${data.id}`}>Ver Detalles</Link>
                 
             </div>
         </div>

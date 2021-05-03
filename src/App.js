@@ -5,6 +5,7 @@ import NavBar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
+import ItemCategoryContainer from './components/ItemCategoryContainer'
 import HomePage from './container/Pages/homepage/Homepage'
 import PageEmpresa from './container/Pages/empresapage/PageEmpresa'
 import PageServicios from './container/Pages/serviciospage/PageServicios'
@@ -28,15 +29,18 @@ function App() {
           <Route path="/servicios">
             <PageServicios/>
           </Route>
-          <Route path="/productos">  
+         <Route exact path="/categorias/:categoryId">
+          
+            <ItemCategoryContainer /> 
+          
+        </Route>
+          <Route exact path="/productos">  
       
           <ItemListContainer greeting = "Soluciones reales a problemas digitales"/>
-            
-          
           
           </Route>
-          <Route path="/productos/:itemsId">
-          <ItemDetailContainer itemId ={5}/>
+          <Route exact path="/productos/:itemsId">
+          <ItemDetailContainer/>
           </Route>
       
       </Switch>

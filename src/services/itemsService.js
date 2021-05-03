@@ -1,10 +1,11 @@
-function getItemsById(idItems) {
+function getItemsById(itemsId) {
     return new Promise((resolve, reject) => {
-      fetch(`items.json${idItems}`)
-      console.log(idItems)
+      fetch(`https://raw.githubusercontent.com/Juanca-Developer/tiendaCyrtech/master/public/items.json/${itemsId}`)
+      
         .then(res => res.json())
         .then(data => resolve(data))
         .catch(err => reject(err))
+        
     })
   }
   module.exports = {
@@ -12,4 +13,5 @@ function getItemsById(idItems) {
     getItemsById,
     
   }
+
   
