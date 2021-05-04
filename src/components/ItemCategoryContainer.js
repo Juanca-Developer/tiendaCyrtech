@@ -20,7 +20,7 @@ function ItemCategoryContainer({category}) {
             let producto = items.filter (x => x.categoria == categoryId)
             setItem(producto)
     
-            }, [category]);
+            }, [categoryId]);
     
     return(
         <div>{<ItemCategory data = {item}/>}

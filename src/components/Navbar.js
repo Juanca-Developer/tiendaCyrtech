@@ -18,12 +18,12 @@ export default function NavBar() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
              <Nav className="mr-auto">
-               <Link to ="/empresa">Empresa</Link>
-               <Link to="/servicios">Servicios</Link>
-               <Link to="/productos">Productos</Link>
-               <Link to="/categorias/Servidores">Servidores</Link>
-               <Link to="/categorias/Switch">Switch</Link>
-               <Link to="/contacto">Contacto</Link>
+               <Link to ="/empresa" className="link">Empresa</Link>
+               <Link to="/servicios"className="link" >Servicios</Link>
+               <Link to="/productos"className="link">Productos</Link>
+               <Link to="/categorias/Servidores"className="link">Servidores</Link>
+               <Link to="/categorias/Switch"className="link">Switch</Link>
+               <Link to="/contacto" className="link">Contacto</Link>
              </Nav>
              
           </Navbar.Collapse>
