@@ -6,15 +6,14 @@ export default function Item({ data }) {
   return (
     <div className="col-sm-6 col-xl-4">
       <div className="card ">
-        <p className="card-text detailTitle">{data.categoria}</p>
-        <img
-          type="image"
-          className="card-img-top btn image"
-          src={data.img}
-          alt="..."
-        ></img>
-        <div className="card-body"></div>
-        <Link to = {`/categorias/${data.categoria}`}>Ver Categorias</Link>
+        <p className="card-text detailTitle">{data.titulo}</p>
+        <img src={data.img} className="card-img-top" alt={data.categoria}/>
+        
+        <div className="card-body">
+          <p>{data.descripcion}</p>
+          <p>Precio $ {data.precio}</p>
+        </div>
+        
           
         
       </div>
