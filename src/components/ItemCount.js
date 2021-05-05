@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import Card from "react-bootstrap/Card"
 import Button from "react-bootstrap/Button"
 
-export default function ItemCount() {
+export default function ItemCount({cantidadCarrito}) {
 
 var stock = 5
   const [cantidad, setCantidad] = useState(1);
@@ -26,7 +26,9 @@ var stock = 5
       alert("Debe agregar algun producto");
     }
   }
-
+  function addCart() {
+    cantidadCarrito(cantidad)
+  }
     
     return (
       <div className="item-count">
@@ -39,7 +41,7 @@ var stock = 5
                <Button variant ="info" onClick ={onDecrement}> - </Button>
                Cantidad = {cantidad}
                <Button variant ="info" onClick ={onIncrement}> + </Button>
-               <Button variant="primary">Agregar al Carrito</Button>
+               {cantidad > 0 ? <Button variant="primary" onClick={addCart}>Agregar al Carrito</Button> : <Button variant ="primary"onClick={addCart} className="btn btn-success" disabled>Terminar Compra</Button>}
                
              </Card.Body>
           </Card>

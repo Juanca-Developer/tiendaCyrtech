@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import { Modal, Image} from "react-bootstrap";
 import {useParams} from 'react-router-dom';
 import ItemCount from "../components/ItemCount";
@@ -6,7 +6,15 @@ import './itemDetail.css'
 
 
 export default function ItemDetail({ item }) {
+
+  const [quantitytoAdd, setquantitytoAdd] = useState(true)
   
+
+  function onAdd (cantidad){
+    setquantitytoAdd(cantidad);
+    
+    console.log(quantitytoAdd)   
+  }
 
   return (
     
@@ -23,8 +31,8 @@ export default function ItemDetail({ item }) {
       <Modal.Footer>
       <p>Precio $ {item.precio}</p>  
 
-      <ItemCount/>    
-      </Modal.Footer>
+      <ItemCount cantidadCarrito ={onAdd}/> 
+       </Modal.Footer>
       </Modal.Dialog>
     
     
