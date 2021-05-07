@@ -13,6 +13,7 @@ import {useParams} from 'react-router-dom'
         return item.id == itemId; 
     }*/        
     useEffect(() => {
+
         
         let producto = items.find (x => x.id == itemsId)
         setItem(producto)
