@@ -5,21 +5,22 @@ import NavBar from './components/Navbar'
 import ItemListContainer from './components/ItemListContainer';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
-import ItemCategoryContainer from './components/ItemCategoryContainer'
+import CartContainer from './components/CartContainer'
 import HomePage from './container/Pages/homepage/Homepage'
 import PageEmpresa from './container/Pages/empresapage/PageEmpresa'
 import PageServicios from './container/Pages/serviciospage/PageServicios'
-import {CardContext} from './context/CardContext'
+import ContextProvider from './context/CardContext'
 
 function App() {
+
   return (
-    <div className="App">
-    <CardContext.Provider value ={[]}>  
-    <Router> 
     
-    <NavBar/>
+    <ContextProvider>  
+       <Router> 
+    
+        <NavBar/>
      
-      <Switch>
+        <Switch>
           <Route exact path="/home">
             <HomePage/>
           </Route>
@@ -31,23 +32,25 @@ function App() {
           </Route>
          <Route exact path="/categorias/:categoryId">
           
-            <ItemCategoryContainer /> 
+            <ItemListContainer /> 
           
         </Route>
           <Route exact path="/productos">  
       
-          <ItemListContainer greeting = "Soluciones reales a problemas digitales"/>
+          <ItemListContainer greeting = "Los mejores productos para tus problemas digitales"/>
           
           </Route>
           <Route exact path="/productos/:itemsId">
           <ItemDetailContainer/>
           </Route>
+          <Route path="/cart">
+            <CartContainer/>
+          </Route>
+         </Switch>
       
-      </Switch>
-      
-    </Router> 
-    </CardContext.Provider> 
-    </div>
+        </Router> 
+    </ContextProvider> 
+    
   );
 }
 

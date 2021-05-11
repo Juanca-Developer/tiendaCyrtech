@@ -9,9 +9,7 @@ import {useParams} from 'react-router-dom'
     const[item, setItem]=useState([]);
     const {itemsId} = useParams()
 
-    /* const isItemId = (item) => {
-        return item.id == itemId; 
-    }*/        
+   
     useEffect(() => {
 
         

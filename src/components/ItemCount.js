@@ -10,42 +10,42 @@ var stock = 5
 
 
   function onIncrement() {
-      if (stock > cantidad) {
-          
-          setCantidad(cantidad+ 1);
+     setCantidad(cantidad+ 1);
 
-      } else {
-          alert('La cantidad es mayor al Stock disponible')
-      }
-  }
+      } 
 
   function onDecrement() {
-    if (cantidad> 1) {
       setCantidad(cantidad - 1);
-    } else {
-      alert("Debe agregar algun producto");
-    }
+    } 
+  
+  function agregarItem() {
+    cantidadCarrito(cantidad);
   }
-  function addCart() {
-    cantidadCarrito(cantidad)
-  }
+  
+  
     
     return (
-      <div className="item-count">
+      < div  className="item-count">
+        
          <Card >
            
              <Card.Body>
                 
                 <p> Stock Disponible = {stock}</p>
-               
-               <Button variant ="info" onClick ={onDecrement}> - </Button>
-               Cantidad = {cantidad}
-               <Button variant ="info" onClick ={onIncrement}> + </Button>
-               {cantidad > 0 ? <Button variant="primary" onClick={addCart}>Agregar al Carrito</Button> : <Button variant ="primary"onClick={addCart} className="btn btn-success" disabled>Terminar Compra</Button>}
+               {
+                cantidad > 0 ? <Button variant ="info" onClick ={onDecrement}> - </Button> : <Button variant ="info" onClick ={onDecrement} disabled> - </Button>
+               }
+               Cantidad = {cantidad} 
+               {
+               cantidad < `${stock}` ? <Button variant ="info" onClick ={onIncrement}> + </Button> : <Button variant ="info" onClick ={onIncrement} disabled> + </Button>
+               }
+              
+               {cantidad > 0 ? <Button variant="primary" onClick={agregarItem}>Agregar al Carrito</Button> : <Button variant ="primary" className="btn btn-success"onClick={agregarItem} disabled>Agregar al Carrito </Button>}
+              
                
              </Card.Body>
           </Card>
-       
+          
       </div>
         
     

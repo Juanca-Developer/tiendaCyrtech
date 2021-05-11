@@ -8,18 +8,24 @@ import {useParams} from 'react-router-dom'
 
 export default function ItemListContainer({greeting,category}) {
     const [data, setData] = useState([]);
+    const {categoryId} = useParams()
+
+    useEffect(() => {
+        if (categoryId) {
+            let producto = items.filter(x => x.categoria == categoryId)
+            setData(producto);
+
+        }else {
+            new Promise((resolve, reject) => { 
+                
+                    resolve(items);
+                     
+            })
+            .then(res=> setData(res))
+        }
+    }, [categoryId]);
     
 
-    
-
-    new Promise((resolve, reject) => { 
-        setTimeout(() => {
-            resolve(items);
-             }, 2000);
-    })
-    .then(res=> setData(res))
-
-    
 
     return(
         <div>

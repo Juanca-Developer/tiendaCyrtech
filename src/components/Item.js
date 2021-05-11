@@ -1,6 +1,8 @@
 import React from 'react'
 import ItemCount from '../components/ItemCount';
 import {Link} from 'react-router-dom'
+import { Button} from "react-bootstrap";
+import './Item.css'
 
 
 
@@ -13,12 +15,11 @@ export default function Item({data}) {
             <div className="card-body">
                 <h5 className="card-title">{data.titulo}</h5>
                 <p className="card-price">Precio: $ {data.precio}</p>
-                
-              
+                <p className="card-price">Stock: {data.stock}</p>
+                              
             </div>
             <div>
-                <ItemCount producto={data.categoria} />
-                <Link to = {`/productos/${data.id}`}>Ver Detalles</Link>
+                <Button variant ="success" className ="button-link"> <Link className ="link"to = {`/productos/${data.id}`}>Ver Detalles</Link></Button>
                 
             </div>
         </div>
