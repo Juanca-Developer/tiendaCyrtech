@@ -1,16 +1,24 @@
-import db from '../firebase'
+import { getDocDataAndId } from '../../utils/firebaseUtil';
+import {db} from '../firebase'
 
-const postCollection = db.collection('items')
+const postCollection = db.collection('Items')
 
-export function getItems() {
-  return postCollection.get()
-  .then(snapshot=> {
-    return snapshot.docs.map(doc => doc.data())
 
-  })
-  
+export function getCollection() {
+  return postCollection;
 }
 
+
+
+export async function getItems() {
+  const docRef = await postCollection.get ()
+   
+  const items = docRef.docs.map(getDocDataAndId) 
+  
+return items;
+}
+
+  
 
 export function getItemsById(itemsId) {
 
