@@ -27,9 +27,9 @@ export default function ItemDetail({ item }) {
   function productoAgregado(){
     const nuevoItem = {
       id: item.id,
-      categoria: item.categoria,
-      titulo: item.titulo,
-      precio: item.precio,
+      categoria: item.category,
+      titulo: item.title,
+      precio: item.price,
       cantidad: cantidadCompra
     };
     console.log(nuevoItem);
@@ -39,12 +39,12 @@ export default function ItemDetail({ item }) {
 
        
      <Card style={{ width: '35rem', margin: '15px', }}>
-        <Card.Img variant="bottom" src={item.img} alt= "foto-producto" />
+        <Card.Img variant="bottom" src={item.image} alt= "foto-producto" />
          <Card.Body>
-            <Card.Title>{item.titulo}</Card.Title>
+            <Card.Title>{item.title}</Card.Title>
               <Card.Text>
-                  <p>{item.descripcion}</p>
-                  <Card.Title>Precio: $ {item.precio}</Card.Title>
+                  <p>{item.description}</p>
+                  <Card.Title>Precio: $ {item.price}</Card.Title>
               </Card.Text>
                 <ItemCount cantidadCarrito ={addButton}/>
                 <Button variant ="dark "hidden={!show.hidden} onClick={() => history.push(`/cart`)}>Ir al Carrito</Button>

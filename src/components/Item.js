@@ -10,12 +10,12 @@ export default function Item({data}) {
     return (
         
         <div className="card h-100">
-            <h5 className="card-title">{data.categoria}</h5>
-            <img src={data.img} className="card-img-top" alt={data.categoria}/>
+            <h5 className="card-title">{data.category}</h5>
+            <img src={data.image} className="card-img-top" alt={data.category}/>
             <div className="card-body">
-                <h5 className="card-title">{data.titulo}</h5>
-                <p className="card-price">Precio: $ {data.precio}</p>
-                <p className="card-price">Stock: {data.stock}</p>
+                <h4 className="card-title">{data.title}</h4>
+                <h5 className="card-price">Precio: $ {data.price}</h5>
+                <p className="card-stock">Stock: {data.stock} unidades</p>
                               
             </div>
             <div>

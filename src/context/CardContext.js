@@ -11,7 +11,7 @@ function itemAgregado (id) {
     return carrito.some(item => item.id === id)
 }
 
-function agregarItem({id, titulo, precio, cantidad}) {
+function agregarItem({id, titulo, precio, cantidad, categoria, stock}) {
     
     const carritoActual = itemAgregado(id)
     if (carritoActual) {
@@ -26,10 +26,10 @@ function agregarItem({id, titulo, precio, cantidad}) {
         })
         return setCarrito([...nuevoCarrito])
     }
-    setCarrito([...carrito, {id, titulo, precio, cantidad}])
+    setCarrito([...carrito, {id, titulo, precio, cantidad, categoria, stock}])
 }
 
-function removerItem({id, titulo, precio, cantidad}) {
+function removerItem({id, titulo, precio, cantidad, categoria, stock}) {
     
     const carritoActual = itemAgregado(id)
     if (carritoActual) {
@@ -44,11 +44,27 @@ function removerItem({id, titulo, precio, cantidad}) {
         })
         return setCarrito([...nuevoCarrito])
     }
-    setCarrito([...carrito, {id, titulo, precio, cantidad}])
+    setCarrito([...carrito, {id, titulo, precio, cantidad, categoria, stock}])
 }
 
+function actualizarCarrito({id, categoria, titulo, precio, cantidad, stock}) {
+    const isCurrentInCart = itemAgregado(id)
+    if (isCurrentInCart) {
+        const nuevoCarrito = carrito.map(item => {
+            if (item.id === id) {
+                return {
+                    ...item,
+                    cantidad: cantidad
+                }
+            }
+            return item
+        })
+        return setCarrito([...nuevoCarrito])
+    }
+    setCarrito([...carrito, {id, categoria, titulo, precio, cantidad, stock}])
+}
 
-function limpiarCarrito(){
+function vaciarCarrito(){
     setCarrito([]);
 }
 
@@ -57,9 +73,10 @@ return (
         {
             carrito,
             setCarrito,
+            actualizarCarrito,
             agregarItem,
             removerItem,
-            limpiarCarrito,
+            vaciarCarrito,
             
             
         }
