@@ -13,7 +13,7 @@ export function getCollection() {
 export function getItems (){
   return postCollection.get ()
   .then (snapshot => {
-    return snapshot.docs.map(doc=> doc.data())
+    return snapshot.docs.map(doc=> ({ ...doc.data(), id: doc.id }))
   })
 }
 
@@ -29,9 +29,10 @@ return items;
 export function getItemsById(id) {
 
     return postCollection.doc(id).get()
-        .then(snapshot=> {
-          return snapshot.docs.map(doc => doc.data())
-    }) 
-  }
+    .then (snapshot => {
+    return ({...snapshot.data(), id: snapshot.id})
+        
+  })
+}
   
   

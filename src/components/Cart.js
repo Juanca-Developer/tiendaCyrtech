@@ -13,6 +13,7 @@ function aumentarCantidad () {
         id: itemSelect.id,
         categoria: itemSelect.categoria,
         titulo: itemSelect.titulo,
+        imagen: itemSelect.image,
         precio: itemSelect.precio,
         cantidad: itemSelect.cantidad+1,
         stock: itemSelect.stock
@@ -47,7 +48,7 @@ return (
   <tbody>
     <tr>
     <td> 
-				<Image className="img-cart" src= {itemSelect.img}></Image>
+				<Image className="img-cart" src= {itemSelect.image}></Image>
             </td>	
             <td>
 				{itemSelect.categoria}
@@ -67,7 +68,7 @@ return (
             {
                 itemSelect.cantidad > 1 ? <Button onClick={disminuirCantidad} variant="danger" >-</Button> : <Button variant="danger" onClick={disminuirCantidad} disabled>-</Button>
              }
-                <Button onclick = {removerItem}>BORRAR</Button>        
+                <Button onclick = {() => removerItem (itemSelect.id)}>BORRAR</Button>        
             </td>
     </tr>
    

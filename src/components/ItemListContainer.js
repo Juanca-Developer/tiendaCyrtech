@@ -14,7 +14,7 @@ export default function ItemListContainer({greeting,category}) {
     useEffect(() => {
         getItems()
             .then(res => setData(res))
-    },[])
+    },[categoryId])
 
     /* useEffect(() => {
         if (categoryId) {
