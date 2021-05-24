@@ -29,8 +29,8 @@ function agregarItem({id, titulo, precio, cantidad, categoria, stock}) {
     setCarrito([...carrito, {id, titulo, precio, cantidad, categoria, stock}])
 }
 
-function removerItem(id ) {
-  const nuevoCarrito = carrito.filter((item) => item.id !== id);
+function removerItem(id) {
+  const nuevoCarrito = carrito.filter((item => item.id !== id));
         setCarrito(nuevoCarrito);
 }
 

@@ -15,15 +15,7 @@ const { getItemsById } = require ('../../src/services/itemsService');
           .then(data => setItem(data))
       },[itemsId])
 
-    /* useEffect(() => {
-
         
-        let producto = items.find (x => x.id == itemsId)
-        setItem(producto)
-
-        }, [itemId]); */
-        
-    
     return (
     
     <div>{<ItemDetail item = {item}/>}

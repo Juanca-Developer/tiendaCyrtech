@@ -1,5 +1,5 @@
 import React,{useContext, useState} from "react";
-import { Card, Button} from "react-bootstrap";
+import { Card , Row, Col, Button} from "react-bootstrap";
 import ItemCount from "../components/ItemCount";
 import { useHistory } from 'react-router-dom';
 import {CartContext} from '../context/CardContext'
@@ -37,9 +37,28 @@ export default function ItemDetail({ item }) {
   }
   return (
 
-       
+    <Card style={{ width: '65rem', margin:'5rem' }}>
+  <Row className='no-gutters'>
+  <Col>
+  <Card.Img variant="medium" src={item.image} />
+  </Col>
+  <Col>
+  <Card.Body>
+    <Card.Title>{item.title}</Card.Title>
+    <Card.Text>
+      {item.description}
+    </Card.Text>
+    <ItemCount cantidadCarrito ={addButton}/>
+    <Button variant ="dark "hidden={!show.hidden} onClick={() => history.push(`/cart`)}>Ir al Carrito</Button>
+  </Card.Body>
+  </Col>
+  </Row>
+</Card>
+      
+   /*   
+         
      <Card style={{ width: '35rem', margin: '15px', }}>
-        <Card.Img variant="bottom" src={item.image} alt= "foto-producto" />
+    <Card.Img variant="bottom" src={item.image} alt= "foto-producto" />  
          <Card.Body>
             <Card.Title>{item.title}</Card.Title>
               <Card.Text>
@@ -50,6 +69,7 @@ export default function ItemDetail({ item }) {
                 <Button variant ="dark "hidden={!show.hidden} onClick={() => history.push(`/cart`)}>Ir al Carrito</Button>
           </Card.Body>
        </Card>
+        */
       
   );
 }

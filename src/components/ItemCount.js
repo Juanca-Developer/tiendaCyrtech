@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import Card from "react-bootstrap/Card"
-import Button from "react-bootstrap/Button"
+import {Button, Badge} from "react-bootstrap"
 
 export default function ItemCount({cantidadCarrito}) {
 
@@ -25,7 +25,7 @@ var stock = 5
   
     
     return (
-      < div  className="item-count">
+      < div >
         
          <Card >
            
@@ -35,7 +35,7 @@ var stock = 5
                {
                 cantidad > 0 ? <Button variant ="info" onClick ={onDecrement}> - </Button> : <Button variant ="info" onClick ={onDecrement} disabled> - </Button>
                }
-               Cantidad = {cantidad} 
+               <Badge variant="secondary">{cantidad} </Badge> 
                {
                cantidad < `${stock}` ? <Button variant ="info" onClick ={onIncrement}> + </Button> : <Button variant ="info" onClick ={onIncrement} disabled> + </Button>
                }

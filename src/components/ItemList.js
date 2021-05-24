@@ -8,7 +8,7 @@ export default function List({dataInput}) {
         {
             dataInput.map((datos) => { 
             return (
-                <Item key={datos.id} data={datos} />
+                <Item key={datos.id} data={datos}/>
             )
             })
         }

@@ -8,15 +8,12 @@ export default function Cart({itemSelect}) {
 const {actualizarCarrito,agregarItem,removerItem} = useContext(CartContext);
 
 
+
 function aumentarCantidad () {
     const nuevoArticulo = {
         id: itemSelect.id,
-        categoria: itemSelect.categoria,
-        titulo: itemSelect.titulo,
-        imagen: itemSelect.image,
-        precio: itemSelect.precio,
         cantidad: itemSelect.cantidad+1,
-        stock: itemSelect.stock
+        
     };
     console.log(nuevoArticulo);
     actualizarCarrito(nuevoArticulo);
@@ -24,9 +21,6 @@ function aumentarCantidad () {
 function disminuirCantidad () {
     const nuevoArticulo = {
         id: itemSelect.id,
-        categoria: itemSelect.categoria,
-        titulo: itemSelect.titulo,
-        precio: itemSelect.precio,
         cantidad: itemSelect.cantidad-1
     };
     console.log(nuevoArticulo);
@@ -48,7 +42,7 @@ return (
   <tbody>
     <tr>
     <td> 
-				<Image className="img-cart" src= {itemSelect.image}></Image>
+				<img className="img-cart" src = {itemSelect.image} alt = "foto-producto"/>
             </td>	
             <td>
 				{itemSelect.categoria}
@@ -57,7 +51,7 @@ return (
 				{itemSelect.titulo}
 			</td>
 			<td>
-				{itemSelect.precio}
+				{itemSelect.precio*itemSelect.cantidad}
 			</td>
             <td>
             {
@@ -68,10 +62,12 @@ return (
             {
                 itemSelect.cantidad > 1 ? <Button onClick={disminuirCantidad} variant="danger" >-</Button> : <Button variant="danger" onClick={disminuirCantidad} disabled>-</Button>
              }
-                <Button onclick = {() => removerItem (itemSelect.id)}>BORRAR</Button>        
+                <Button onClick = {()=>removerItem(itemSelect.id)}>BORRAR</Button> 
+                
+
             </td>
     </tr>
-   
+    
   </tbody>
 </Table>
        
