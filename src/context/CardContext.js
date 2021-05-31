@@ -11,7 +11,7 @@ function itemAgregado (id) {
     return carrito.some(item => item.id === id)
 }
 
-function agregarItem({id, titulo, precio, cantidad, categoria, stock}) {
+function agregarItem({id, titulo, precio, cantidad, categoria}) {
     
     const carritoActual = itemAgregado(id)
     if (carritoActual) {
@@ -26,7 +26,7 @@ function agregarItem({id, titulo, precio, cantidad, categoria, stock}) {
         })
         return setCarrito([...nuevoCarrito])
     }
-    setCarrito([...carrito, {id, titulo, precio, cantidad, categoria, stock}])
+    setCarrito([...carrito, {id, titulo, precio, cantidad, categoria,}])
 }
 
 function removerItem(id) {
@@ -34,7 +34,7 @@ function removerItem(id) {
         setCarrito(nuevoCarrito);
 }
 
-function actualizarCarrito({id, categoria, titulo, precio, cantidad, stock}) {
+function actualizarCarrito({id, categoria, titulo, precio, cantidad}) {
     const isCurrentInCart = itemAgregado(id)
     if (isCurrentInCart) {
         const nuevoCarrito = carrito.map(item => {
@@ -48,12 +48,20 @@ function actualizarCarrito({id, categoria, titulo, precio, cantidad, stock}) {
         })
         return setCarrito([...nuevoCarrito])
     }
-    setCarrito([...carrito, {id, categoria, titulo, precio, cantidad, stock}])
+    setCarrito([...carrito, {id, categoria, titulo, precio, cantidad,}])
 }
 
 function vaciarCarrito(){
     setCarrito([]);
 }
+
+const cantidad = carrito.map (item => item.cantidad)
+
+const sumaCantidad = cantidad.reduce((prev, next)=> prev + next, 0);
+
+const precio = carrito.map(item => (item.precio * item.cantidad))   
+  
+const sumaPrecios = precio.reduce((prev, next) => prev + next, 0);
 
 return (
     <CartContext.Provider value={
@@ -64,6 +72,8 @@ return (
             agregarItem,
             removerItem,
             vaciarCarrito,
+            sumaPrecios,
+            sumaCantidad
             
             
         }

@@ -41,6 +41,9 @@ export default function ItemDetail({ item }) {
   <Row className='no-gutters'>
   <Col>
   <Card.Img variant="medium" src={item.image} />
+  <Card.Text className = "card-price">
+      <span>${item.price} </span> 
+    </Card.Text>
   </Col>
   <Col>
   <Card.Body>
@@ -49,7 +52,8 @@ export default function ItemDetail({ item }) {
       {item.description}
     </Card.Text>
     <ItemCount cantidadCarrito ={addButton}/>
-    <Button variant ="dark "hidden={!show.hidden} onClick={() => history.push(`/cart`)}>Ir al Carrito</Button>
+    <Button variant ="dark " hidden={!show.hidden} onClick={() => history.push(`/cart`)}>Ir al Carrito</Button>
+    <Button variant ="dark " hidden={!show.hidden} onClick={() => history.push(`/productos`)}>Continuar comprando</Button>
   </Card.Body>
   </Col>
   </Row>

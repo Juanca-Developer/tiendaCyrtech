@@ -10,6 +10,7 @@ import HomePage from './container/Pages/homepage/Homepage'
 import PageEmpresa from './container/Pages/empresapage/PageEmpresa'
 import PageServicios from './container/Pages/serviciospage/PageServicios'
 import ContextProvider from './context/CardContext'
+import FormBuy from './components/FormBuy'
 
 function App() {
 
@@ -40,6 +41,11 @@ function App() {
           <ItemListContainer greeting = "Los mejores productos para tus problemas digitales"/>
           
           </Route>
+          <Route exact path="/carrito/:compra">
+          
+            <FormBuy /> 
+          
+        </Route>
           <Route exact path="/productos/:itemsId">
           <ItemDetailContainer/>
           </Route>

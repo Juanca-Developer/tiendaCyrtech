@@ -2,12 +2,25 @@ import React, { useState, useEffect } from "react";
 import ItemList from "../components/ItemList";
 //import items from './items.json'
 import { useParams } from "react-router-dom";
+import { getDocDataAndId } from "../utils/firebaseUtil";
 
-const { getItems } = require("../../src/services/itemsService");
+const { getItems , getCollection} = require("../../src/services/itemsService");
 
-export default function ItemListContainer({ greeting, category }) {
+export default function ItemListContainer({ greeting, }) {
   const [data, setData] = useState([]);
   const { categoryId } = useParams();
+
+
+  useEffect(() =>{
+
+    const unsubscribe = getCollection().onSnapshot(snapshot =>{
+      const itemsResponse = snapshot.docs.map(getDocDataAndId);
+      setData(itemsResponse)
+    })
+    return ()=> {
+      unsubscribe();
+    }
+  },[])
 
   useEffect(() => {
     if (categoryId) {

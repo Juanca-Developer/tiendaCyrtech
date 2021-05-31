@@ -1,11 +1,11 @@
 import React, {useContext }from 'react'
 import {CartContext} from '../context/CardContext'
-import {Button, Image, Table} from 'react-bootstrap'
+import {Button, Table} from 'react-bootstrap'
 import './Cart.css'
 
 
 export default function Cart({itemSelect}) {
-const {actualizarCarrito,agregarItem,removerItem} = useContext(CartContext);
+const {actualizarCarrito,removerItem} = useContext(CartContext);
 
 
 
@@ -28,8 +28,9 @@ function disminuirCantidad () {
 }
 
 return (
-
+  
     <Table striped bordered hover>
+      
   <thead>
     <tr>
       <th>Producto</th>
@@ -42,7 +43,7 @@ return (
   <tbody>
     <tr>
     <td> 
-				<img className="img-cart" src = {itemSelect.image} alt = "foto-producto"/>
+    <img src={itemSelect.image} className="card-img-top" alt={itemSelect.categoria}/>
             </td>	
             <td>
 				{itemSelect.categoria}

@@ -1,5 +1,4 @@
 import React from 'react'
-import ItemCount from '../components/ItemCount';
 import {Link} from 'react-router-dom'
 import { Button} from "react-bootstrap";
 import './Item.css'
