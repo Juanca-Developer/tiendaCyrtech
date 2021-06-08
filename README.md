@@ -1,15 +1,22 @@
 # TIENDACYRTECH
 
-TiendaCyrtech es un proyecto de ecommerce para darle funcionalidad a la pagina de la empresa.
-El mismo esta en etapa de desarrolo de la vista y los detalles de los productos a vender.
-El proyecto fue creado con Create React App y se usan librerias de Boostrap    
+TiendaCyrtech es un proyecto de ecommerce para darle más funcionalidad a la página de Cyrtech.
+La empresa no mostraba sus productos en la web ni tenia configurado Carrito de Compras
+El proyecto fue creado con Create React App y se usan librerias de React-Boostrap    
 
 
-## Available Scripts
+## Como montar la aplicación
 
-In the project directory, you can run:
+En el directorio tiendaCyrtech, hay que ejecutar
+
 
 ### `npm start`
+
+## Para ver el gif solicitado
+
+Hacer click en el enlace abajo detallado
+
+
 
 Runs the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
