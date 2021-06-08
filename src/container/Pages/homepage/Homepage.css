@@ -1,5 +1,53 @@
-.container-home{
+.container_home{
 margin: 10px;
 padding: 2px;
+
+
+}
+
+.container_flex{
+
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    background-color: khaki;
+
+}
+
+.imagen{
+    height: 50vmin;
+    padding: 20px;
+    margin: 40px;
+}
+
+
+.container_home--title{
+    width: 100%;
+    margin-top: 10px;
+    text-align: left;
+    background-color: rgb(169, 146, 131);
+    font-family: Oxygen, sans-serif;
+    
+    font-weight: 700;
+    padding: 5px ;
+}
+
+.container-list{
+
+    margin-top: 10px; 
+    font-family: Oxygen, sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 20px;
+    
+}
+.container_home--subtitle{
+   
+    width: 50%;
+    margin: 50px; 
+    list-style: none;
+    font-family: Oxygen, sans-serif;
+    font-size: 20px;
+    padding: 10px;
 
 }

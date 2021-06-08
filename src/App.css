@@ -8,11 +8,7 @@
   
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    
-  }
-}
+
 h1 {
   text-align: center;
   font-size: large;

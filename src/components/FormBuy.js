@@ -39,7 +39,7 @@ export default function FormBuy() {
 
     
     return (
-        <div>
+        <div className = "container-general">
           <div>
               
           { !docRef ? <div> <h2>Tu compra:</h2> 
@@ -49,24 +49,24 @@ export default function FormBuy() {
                             return(
                                 <Table>
   
-    
+                                 <div className = "container-celda"> 
                                      <tr>
                                          <td className = "celda-detalle">{item.titulo}</td>
                                          <td className = "celda-detalle">{item.cantidad}</td>
-                                         <td className = "celda-detalle">{item.precio}</td>
+                                         <td className = "celda-detalle">${item.precio}</td>
       
                                      </tr>
-    
+                                     </div>  
                                 </Table>
                                 
                             
                             )
                         })
                     }
-                <p>Total: ${sumaPrecios}</p>
-              
-                <form>
-                    <label>
+                <p className = "container-total">Total: ${sumaPrecios}</p>
+                <h2>Tus datos personales:</h2>
+                <form className = "container-form">
+                    <label >
                         <input type="text" className="form-control" onChange={handleInputChange} name="name"  placeholder="Nombre y Apellido" /> 
                         <br/>
                         <input type="text" className="form-control" onChange={handleInputChange} name="email"  placeholder="Mail" /> 
@@ -80,12 +80,12 @@ export default function FormBuy() {
                     <button
                     disabled={!formData.name || !formData.email || !formData.phone|| !formData.adress }
                     className='buybtn btn btn-success' onClick={() => sendOrder()}>Finalizar Compra</button> </div> : 
-                <div className= "succesDiv">
+                <div className = "docref">
                     <h2>Detalle de compra</h2>
-                    <p> Numero de Compra: #{docRef} </p>
-                    <p> Dirección de envío: {formData.adress}</p>
+                    <h5> Numero de Compra: #{docRef} </h5>
+                    <h5> Dirección de envío: {formData.adress}</h5>
                     
-                    <button className="backHomeBtn btn btn-success" onClick={() => backToHome()}>Volver al home</button>
+                    <button className=" btn btn-success" onClick={() => backToHome()}>Volver al home</button>
                 </div>
                 }
           </div>

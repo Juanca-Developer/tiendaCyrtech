@@ -7,8 +7,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemDetailContainer from './components/ItemDetailContainer';
 import CartContainer from './components/CartContainer'
 import HomePage from './container/Pages/homepage/Homepage'
-import PageEmpresa from './container/Pages/empresapage/PageEmpresa'
 import PageServicios from './container/Pages/serviciospage/PageServicios'
+import ContactPage from './container/Pages/contactpage/ContactPage'
 import ContextProvider from './context/CardContext'
 import FormBuy from './components/FormBuy'
 
@@ -25,11 +25,12 @@ function App() {
           <Route exact path="/home">
             <HomePage/>
           </Route>
-          <Route path="/empresa">
-            <PageEmpresa/>
-          </Route>
+          
           <Route path="/servicios">
             <PageServicios/>
+          </Route>
+          <Route path="/contacto">
+            <ContactPage/>
           </Route>
          <Route exact path="/categorias/:categoryId">
           
@@ -38,7 +39,7 @@ function App() {
         </Route>
           <Route exact path="/productos">  
       
-          <ItemListContainer greeting = "Los mejores productos para tus problemas digitales"/>
+          <ItemListContainer greeting = "Los mejores productos y las mejores marcas"/>
           
           </Route>
           <Route exact path="/carrito/:compra">

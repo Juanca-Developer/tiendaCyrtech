@@ -4,7 +4,7 @@ import './Navbar.css'
 import Nav from "react-bootstrap/Nav"
 import Logo from "../img/cyrtech-logo-vector.png"
 import CartWidget from './CartWidget'
-import {Link} from 'react-router-dom'
+import {NavLink} from 'react-router-dom'
 
 
 export default function NavBar() {
@@ -12,18 +12,18 @@ export default function NavBar() {
     <div>
        
       <Navbar bg="light" expand="lg">
-           <Navbar.Brand href="home">
+           <NavLink to ="/home" className="link-nav" >
           <img className="App-logo" src={Logo} alt="logo" />
-          </Navbar.Brand>
+          </NavLink>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
              <Nav className="mr-auto">
-               <Link to ="/empresa" className="link">Empresa</Link>
-               <Link to="/servicios"className="link" >Servicios</Link>
-               <Link to="/productos"className="link">Productos</Link>
-               <Link to="/categorias/Servidores"className="link">Servidores</Link>
-               <Link to="/categorias/Switch"className="link">Switch</Link>
-               <Link to="/contacto" className="link">Contacto</Link>
+               
+               <NavLink to="/servicios"className="link-nav" >Servicios</NavLink>
+               <NavLink to="/productos"className="link-nav">Productos</NavLink>
+               <NavLink to="/categorias/Servidores"className="link-nav">Servidores</NavLink>
+               <NavLink to="/categorias/Switch"className="link-nav">Switch</NavLink>
+               <NavLink to="/contacto" className="link-nav">Contacto</NavLink>
              </Nav>
              
           </Navbar.Collapse>

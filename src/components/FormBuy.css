@@ -1,6 +1,29 @@
+.container-general{
+
+    margin-left: 35%;
+}
+
+.container-celda{
+
+    display: flex;
+    margin: 2px;
+}
+
+
 .celda-detalle{
-   display: flex;
-   
+   flex-direction: row;
    
 
+}
+.container-form{
+    margin: 10px;
+    padding: 10px;
+}
+.container-total{
+    margin-left: 170px;
+    padding: 10px;
+    text-align: left;
+}
+.docref{
+    text-align: left;
 }

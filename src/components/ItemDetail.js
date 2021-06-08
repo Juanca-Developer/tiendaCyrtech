@@ -59,21 +59,6 @@ export default function ItemDetail({ item }) {
   </Row>
 </Card>
       
-   /*   
          
-     <Card style={{ width: '35rem', margin: '15px', }}>
-    <Card.Img variant="bottom" src={item.image} alt= "foto-producto" />  
-         <Card.Body>
-            <Card.Title>{item.title}</Card.Title>
-              <Card.Text>
-                  <p>{item.description}</p>
-                  <Card.Title>Precio: $ {item.price}</Card.Title>
-              </Card.Text>
-                <ItemCount cantidadCarrito ={addButton}/>
-                <Button variant ="dark "hidden={!show.hidden} onClick={() => history.push(`/cart`)}>Ir al Carrito</Button>
-          </Card.Body>
-       </Card>
-        */
-      
   );
 }

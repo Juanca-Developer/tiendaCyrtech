@@ -55,6 +55,7 @@ function vaciarCarrito(){
     setCarrito([]);
 }
 
+
 const cantidad = carrito.map (item => item.cantidad)
 
 const sumaCantidad = cantidad.reduce((prev, next)=> prev + next, 0);
