@@ -16,6 +16,8 @@ En el directorio tiendaCyrtech, hay que ejecutar
 
 Hacer click en el enlace abajo detallado
 
+https://github.com/Juanca-Developer/tiendaCyrtech/blob/master/tiendacyrtech.gif
+
 
 
 Runs the app in the development mode.\
